@@ -13,7 +13,7 @@ export default function Post() {
   const userData = useSelector((state) => state.auth.userData);
 
   let id = userData.$id !== undefined ? userData.$id : userData.userData.$id;
-  const isAuthor = post && userData ? post.userid === id : false;
+  const isAuthor = post && userData ? post.Userid === id : false;
   useEffect(() => {
     if (slug) {
       appwriteService.getPost(slug).then((post) => {

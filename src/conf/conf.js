@@ -12,6 +12,6 @@ const conf = {
     }
 
 
-console.log(conf);
+//console.log(conf);
 
 export default conf

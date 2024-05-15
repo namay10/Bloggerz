@@ -26,10 +26,11 @@ function Signup() {
       }
     } catch (error) {
       setError("123",error.message );
-      console.log("error:",error)
+      // console.log("error:",error)
     }
   };
   return (
+    <div className="w-full h-auto bg-bgcolor">
     <div className="flex items-center justify-center py-2">
       <div
         className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
@@ -43,7 +44,7 @@ function Signup() {
           Already have an account?&nbsp;
           <Link
             to="/login"
-            className="font-medium text-primary transition-all duration-200 hover:underline"
+            className="font-medium text-primary transition-all duration-200 hover:underline "
           >
             Sign In
           </Link>
@@ -79,6 +80,10 @@ function Signup() {
               placeholder="Enter your Password : "
               {...register("password", {
                 required: true,
+                validate: {
+                  minLength: (value) =>
+                    value.length > 8 || "Password must be greater than 8 characters",            
+                },
               })}
             />
             <Button type="submit" className="w-full">
@@ -87,6 +92,7 @@ function Signup() {
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 }

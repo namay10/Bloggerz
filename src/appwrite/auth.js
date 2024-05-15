@@ -7,12 +7,12 @@ export class AuthService {
     account;
 
     constructor() {
-        console.log('Endpoint URL:', conf.appWriteUrl,conf.appWriteProjectId);
+       // console.log('Endpoint URL:', conf.appWriteUrl,conf.appWriteProjectId);
         this.client
             .setEndpoint(conf.appWriteUrl)
             .setProject(conf.appWriteProjectId);
         this.account = new Account(this.client);
-        console.log(this.account)
+        //console.log(this.account)
             
     }
     

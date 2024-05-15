@@ -11,7 +11,7 @@ import { Outlet } from 'react-router-dom'
 function App() {
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
-  console.log(import.meta.env.VITE_APPWRITE_URL);
+  //console.log(import.meta.env.VITE_APPWRITE_URL);
   useEffect(() => {
     authService.getCurrentUser()
     .then((userData) => {
@@ -26,7 +26,7 @@ function App() {
   }, [])
   
   return !loading ? (
-    <div className="min-h-[100dvh] flex flex-col justify-between bg-white">
+    <div className="min-h-[100dvh] flex flex-col justify-between bg-bgcolor">
     
         
         <Header />

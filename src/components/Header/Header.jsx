@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Container } from "../index";
 import LogoutBtn from "./LogoutBtn";
 import Logo from "../Logo";
+import Logo2 from "../../image/Logo2.png"
 import close from "../../image/close.png";
 import menu from "../../image/nav.png";
 
@@ -46,7 +47,12 @@ function Header() {
       name: "Add Post",
       slug: "/add-post",
       active: authStatus,
-    },
+    }
+    // {
+    //   name: "Edit post",
+    //   slug: "/edit-post",
+    //   active: authStatus,
+    // },
   ];
 
   return (
@@ -55,7 +61,8 @@ function Header() {
         <nav className="flex justify-between flex-wrap items-center">
           <div>
             <Link to="/" onClick={closeNavBar}>
-              <Logo width="100px" />
+              {/* <Logo width="100px" /> */}
+              <img className="w-60 h-12"src={Logo2} alt="logo" />
             </Link>
           </div>
           <div className="md:hidden mr-4">
@@ -71,7 +78,7 @@ function Header() {
                     onClick={() => {
                       navigate(item.slug);
                     }}
-                    className="inline-bock text-black px-6 py-2 duration-200 hover:bg-header-hover-color hover:text-white dark:hover:bg-blue-100 rounded-full"
+                    className="inline-bock text-white px-6 py-2 duration-200 hover:bg-header-hover-color hover:text-white dark:hover:bg-blue-100 rounded-full"
                   >
                     {item.name}
                   </button>

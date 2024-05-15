@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Logo";
+import Logo2 from "../../image/Logo2.png";
 import github from "../../image/github.png";
 import twitter from "../../image/twitter.png";
 import linkedin from "../../image/linkedIn.png";
+import portfolio from"../../image/portfolio.png"
 import Icon from "../Icon";
 
 const Footer = () => {
@@ -11,13 +13,13 @@ const Footer = () => {
     {
       name: "LinkedIn",
       icon: linkedin,
-      link: "https://www.linkedin.com/in/riya-banerjee29/",
+      link: "https://www.linkedin.com/in/namay-gupta/",
     },
-    { name: "GitHub", icon: github, link: "https://github.com/RiyaBanerjee29" },
+    { name: "GitHub", icon: github, link: "https://github.com/namay10" },
     {
-      name: "Twitter",
-      icon: twitter,
-      link: "https://twitter.com/Riya_Banerjee29",
+      name: "Portfolio",
+      icon: portfolio,
+      link: "https://portfolio-self-nu-28.vercel.app/",
     },
   ];
 
@@ -26,7 +28,8 @@ const Footer = () => {
       <div className="flex items-center">
         <div className="mb-4 inline-flex items-center">
           <Link to="/">
-            <Logo width="100px" />
+            {/* <Logo width="100px" /> */}
+            <img className="w-60 h-12"src={Logo2} alt="logo" />
           </Link>
         </div>
       </div>
@@ -52,7 +55,7 @@ const Footer = () => {
       </nav>
 
       <p className="text-center mt-4 lg:mt-0 text-sm">
-        &copy; Copyright 2024. All Rights Reserved by Riya Banerjee.
+        &copy; Namay Gupta
       </p>
     </footer>
   );
