@@ -31,7 +31,7 @@ function App() {
         
         <Header />
         <main>
-         <Outlet/>
+         {/* <Outlet/> */}
          <h1>hello</h1>
         </main>
          <Footer />
