@@ -1,6 +1,7 @@
 import { useState ,useEffect} from 'react'
 // import './App.css'
 import { useDispatch } from 'react-redux'
+import Home from './pages/Home.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Header from './components/Header/Header.jsx'
 import authService from "./appwrite/auth.js"
@@ -31,7 +32,8 @@ function App() {
         
         <Header />
         <main>
-         <Outlet/>
+         {/* <Outlet/> */}
+         <Home />
         </main>
          <Footer />
       </div>
