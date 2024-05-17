@@ -7,6 +7,7 @@ import {ReactTyped} from "react-typed";
 
 function Home() {
   const authStatus = useSelector((state) => state.auth.status);
+  console.log(authStatus);  
   
   return (
     <div className="w-full py-2 bg-bgcolor">
