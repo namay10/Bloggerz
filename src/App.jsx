@@ -32,6 +32,7 @@ function App() {
         <Header />
         <main>
          <Outlet/>
+         <h1>hello</h1>
         </main>
          <Footer />
       </div>
