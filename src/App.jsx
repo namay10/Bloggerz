@@ -1,3 +1,4 @@
+
 import { useState ,useEffect} from 'react'
 // import './App.css'
 import { useDispatch } from 'react-redux'
@@ -32,8 +33,8 @@ function App() {
         
         <Header />
         <main>
-         {/* <Outlet/> */}
-         <Home />
+         <Outlet/>
+         {/* <Home /> */}
         </main>
          <Footer />
       </div>
