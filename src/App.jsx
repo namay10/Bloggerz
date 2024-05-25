@@ -34,7 +34,7 @@ function App() {
         <Header />
         
        <main>
-        <Home/>
+          <Outlet />
        </main>
          {/* <Home /> */}
         

@@ -8,6 +8,8 @@ import store from "./store/store.js";
 import { BrowserRouter ,createRoutesFromElements,Routes,Route, RouterProvider } from "react-router-dom";
 import { AuthLayout , Login} from "./components/index.js";
 import LogIn from "./pages/LogIn.jsx";
+import Footer from './components/Footer/Footer.jsx'
+import Header from './components/Header/Header.jsx'
 import AddPost from "./pages/AddPost.jsx"
 import AllPost from "./pages/AllPost.jsx"
 import EditPost from "./pages/EditPost.jsx";
@@ -15,10 +17,10 @@ import Home from "./pages/Home.jsx";
 import Post from "./pages/Post.jsx";
 import SignUp from "./pages/Signup.jsx"
 
-const router = <BrowserRouter>
-  <Routes>
-          <Route path="/" element={<App />}/>
-            <Route path="/" element={<Home />} />
+ const router = <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<Home />} />
             <Route
               path="/login"
               element={
@@ -60,13 +62,14 @@ const router = <BrowserRouter>
               }
             />
             <Route path="/post/:slug" element={<Post />} />
-            
+           </Route>
           </Routes>
           </BrowserRouter>
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
+      
     {/* <App/> */}
       {router}
       
