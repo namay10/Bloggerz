@@ -31,14 +31,7 @@ function App() {
     <div className="min-h-[100dvh] flex flex-col justify-between bg-bgcolor">
     
         
-        <Header />
-        
-       <main>
-          <Outlet />
-       </main>
-         {/* <Home /> */}
-        
-         <Footer />
+      <Home/>
       </div>
     
   ) : null

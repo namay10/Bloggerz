@@ -18,8 +18,10 @@ import Post from "./pages/Post.jsx";
 import SignUp from "./pages/Signup.jsx"
 
  const router = <BrowserRouter>
+        <Header />
+        
         <Routes>
-          <Route path="/" element={<App />}>
+          <Route path="/" element={<App />}/>
             <Route index element={<Home />} />
             <Route
               path="/login"
@@ -62,8 +64,9 @@ import SignUp from "./pages/Signup.jsx"
               }
             />
             <Route path="/post/:slug" element={<Post />} />
-           </Route>
+           
           </Routes>
+          <Footer />
           </BrowserRouter>
 
 ReactDOM.createRoot(document.getElementById("root")).render(
