@@ -32,10 +32,10 @@ function App() {
     
         
         <Header />
-        <main>
-        <Outlet/>
-        </main>
-       
+        
+       <main>
+        <Home/>
+       </main>
          {/* <Home /> */}
         
          <Footer />
