@@ -20,6 +20,7 @@ import SignUp from "./pages/Signup.jsx"
  const router = <BrowserRouter>
         <Header />
         
+        <main>
         <Routes>
           <Route path="/" element={<App />}/>
             <Route index element={<Home />} />
@@ -66,6 +67,7 @@ import SignUp from "./pages/Signup.jsx"
             <Route path="/post/:slug" element={<Post />} />
            
           </Routes>
+        </main>
           <Footer />
           </BrowserRouter>
 

@@ -30,8 +30,12 @@ function App() {
   return !loading ? (
     <div className="min-h-[100dvh] flex flex-col justify-between bg-bgcolor">
     
-        
-      <Home/>
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer/>
+      {/* <Home/> */}
       </div>
     
   ) : null

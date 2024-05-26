@@ -24,7 +24,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="mt-auto text-black relative overflow-hidden bg-primary-color px-10  py-6 flex flex-wrap justify-between items-center">
+    <footer className="mt-auto text-black relative  overflow-hidden bg-primary-color px-10  py-6 flex flex-wrap justify-between items-center">
       <div className="flex items-center">
         <div className="mb-4 inline-flex items-center">
           <Link to="/">
