@@ -22,7 +22,7 @@ import SignUp from "./pages/Signup.jsx"
         
      
         <Routes>
-          <Route path="/" element={<App />}>
+          <Route index element={<App />}>
             <Route path="/" element={<Home />} />
             <Route
               path="/login"
