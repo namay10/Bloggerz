@@ -18,12 +18,10 @@ import Post from "./pages/Post.jsx";
 import SignUp from "./pages/Signup.jsx"
 
  const router = <BrowserRouter>
-    
-        
-     
+
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path="/" element={<Home />} />
+            <Route index path="/" element={<Home />} />
             <Route
               path="/login"
               element={
