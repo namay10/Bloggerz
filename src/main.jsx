@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { Provider } from "react-redux";
 import store from "./store/store.js";
-import { BrowserRouter ,createRoutesFromElements,Routes,Route, RouterProvider } from "react-router-dom";
+import { createBrowserRouter ,createRoutesFromElements,Routes,Route, RouterProvider } from "react-router-dom";
 import { AuthLayout , Login} from "./components/index.js";
 import LogIn from "./pages/LogIn.jsx";
 import Footer from './components/Footer/Footer.jsx'
@@ -17,9 +17,8 @@ import Home from "./pages/Home.jsx";
 import Post from "./pages/Post.jsx";
 import SignUp from "./pages/Signup.jsx"
 
- const router = <BrowserRouter>
-
-        <Routes>
+ const router = createBrowserRouter(
+  createRoutesFromElements(
           <Route path="/" element={<App />}>
             <Route index  element={<Home />} />
             <Route
@@ -64,16 +63,14 @@ import SignUp from "./pages/Signup.jsx"
             />
             <Route path="/post/:slug" element={<Post />} />
            </Route>
-          </Routes>
         
-          </BrowserRouter>
+            ));
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       
-    {/* <App/> */}
-      {router}
+    <RouterProvider router={router} />
       
     </Provider>
   </React.StrictMode>

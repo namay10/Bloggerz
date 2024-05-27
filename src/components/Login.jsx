@@ -26,7 +26,7 @@ function Login() {
             }
         } catch (error) {
             setError(error.message)
-            console.log("error:",error)
+            //console.log("error:",error)
         }
     }
 
