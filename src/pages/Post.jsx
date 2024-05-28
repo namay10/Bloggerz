@@ -36,7 +36,7 @@ export default function Post() {
     <div className="py-8 flex justify-center">
       <div className="max-w-[57rem]">
         <Container>
-          <div className="w-full flex justify-center mb-4 relative border rounded-xl max-h-80">
+          <div className="w-full flex justify-center mb-4 absolute border rounded-xl max-h-80">
             <img
               src={appwriteService.getFilePreview(post.featuredImage)}
               alt={post.title}
