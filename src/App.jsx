@@ -29,9 +29,11 @@ function App() {
   
   return !loading ? (
     <div className="min-h-[100dvh] flex flex-col justify-between bg-bgcolor">
-    <Outlet />
+   
         <Header />
-        
+        <main>
+        <Outlet />
+        </main>
         <Footer/>
       {/* <Home/> */}
       </div>
