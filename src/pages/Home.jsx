@@ -7,7 +7,7 @@ import {ReactTyped} from "react-typed";
 
 function Home() {
   const authStatus = useSelector((state) => state.auth.status);
-  console.log(authStatus);
+
   
   return (
     

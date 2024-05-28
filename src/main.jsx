@@ -5,6 +5,9 @@ import "./index.css";
 import { Provider } from "react-redux";
 import store from "./store/store.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
+import { AuthLayout, Login } from './components/index.js';
 import LogIn from "./pages/LogIn.jsx";
 import AddPost from "./pages/AddPost.jsx";
 import AllPost from "./pages/AllPost.jsx";
@@ -19,32 +22,55 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/",
-        element: <Home />,
+          path: "/",
+          element: <Home />,
       },
       {
-        path: "/login",
-        element: <LogIn />,
+          path: "/login",
+          element: (
+              <AuthLayout authentication={false}>
+                  <LogIn />
+              </AuthLayout>
+          ),
       },
       {
-        path: "/signup",
-        element: <SignUp />,
+          path: "/signup",
+          element: (
+              <AuthLayout authentication={false}>
+                  <SignUp />
+              </AuthLayout>
+          ),
       },
       {
-        path: "/all-posts",
-        element: <AllPost />,
+          path: "/all-posts",
+          element: (
+              <AuthLayout authentication>
+                  {" "}
+                  <AllPost />
+              </AuthLayout>
+          ),
       },
       {
-        path: "/add-post",
-        element: <AddPost />,
+          path: "/add-post",
+          element: (
+              <AuthLayout authentication>
+                  {" "}
+                  <AddPost />
+              </AuthLayout>
+          ),
       },
       {
-        path: "/edit-post/:id",
-        element: <EditPost />,
+          path: "/edit-post/:slug",
+          element: (
+              <AuthLayout authentication>
+                  {" "}
+                  <EditPost />
+              </AuthLayout>
+          ),
       },
       {
-        path: "/post/:id",
-        element: <Post />,
+          path: "/post/:slug",
+          element: <Post />,
       },
     ],
   },
